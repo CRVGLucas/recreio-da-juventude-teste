@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-title>
+      Reservas
+    </ion-title>
+
+    <div>
+      <button class="button">Nova reserva</button>
+      <button class="button">Minhas reservas</button>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <b>Suas reservas confirmadas ({{ reservas.length }})</b>
+
+  <div class="card-reserva" [routerLink]="['/reserva/', reserva.id]" *ngFor="let reserva of reservas">
+    <img class="card-image" [src]="reserva.imagem"/>
+    <h1 class="card-title">{{ reserva.nome }}</h1>
+    <div class="card-reserva-info">
+      <p> <ion-icon name="people-outline"></ion-icon> {{ reserva.capacidade }} pessoas</p>
+      <p><ion-icon name="calendar-clear-outline"></ion-icon>{{ reserva.dataReservada }}</p>
+    </div>
+  </div>
+
+</ion-content>
+

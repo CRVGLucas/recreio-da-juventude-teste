@@ -24,3 +24,33 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.button{
+  background: transparent;
+  border-radius: 2.5rem;
+  border: 1px solid #383737;
+  padding: 10px;
+  color: #383737;
+}
+
+body {
+  background: #f3f5f4;
+}
+
+.card-reserva {
+  border-radius: 1.2rem;
+  background: #FFF;
+  color: #383737;
+  margin: 1.5rem;
+  border: 1px solid #383737;
+  .card-image {
+    width: 100%;
+    overflow: hidden;
+  }
+  .card-title{
+    font-size: 1.8rem;
+  }
+  .card-reserva-info{
+    display: flex;
+  }
+}
