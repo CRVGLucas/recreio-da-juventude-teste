@@ -1,0 +1,7 @@
+{
+  "name": "Recreio da Juventude Teste",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
