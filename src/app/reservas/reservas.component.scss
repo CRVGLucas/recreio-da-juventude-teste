@@ -1,0 +1,40 @@
+.contador-de-reservas{
+  font-weight: bold;
+  margin: 1.3rem;
+}
+
+.reservas-header {
+  padding: 1.1rem;
+
+}
+
+.button-selected {
+  background: rgb(23, 167, 23);
+  border-radius: 2.5rem;
+  padding: 10px;
+  color: #FFF;
+}
+
+.text-green {
+  color: rgb(23, 167, 23);
+}
+
+.button{
+  background: transparent;
+  border-radius: 2.5rem;
+  border: 1px solid #383737;
+  padding: 10px;
+  color: #383737;
+  margin: 0 0.7rem 0 0;
+}
+
+
+.header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .header-title-page {
+    font-size: 0.988rem;
+  }
+}

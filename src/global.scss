@@ -25,13 +25,14 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-.button{
-  background: transparent;
-  border-radius: 2.5rem;
-  border: 1px solid #383737;
-  padding: 10px;
-  color: #383737;
+
+
+p {
+  color: black;
 }
+
+
+
 
 body {
   background: #f3f5f4;
@@ -41,16 +42,29 @@ body {
   border-radius: 1.2rem;
   background: #FFF;
   color: #383737;
+  height: 13.625rem;
   margin: 1.5rem;
-  border: 1px solid #383737;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   .card-image {
+    height: 7.5rem;
     width: 100%;
-    overflow: hidden;
+    object-fit: cover;
   }
   .card-title{
-    font-size: 1.8rem;
+    font-size: 1.1rem;
   }
   .card-reserva-info{
     display: flex;
+    flex-direction: column;
+    padding: 0 0.65rem;
   }
+  .card-reserva-item-info {
+    margin: 0 0.8rem 0 0;
+  }
+}
+
+.icon-green {
+  color: rgb(23, 167, 23);
 }

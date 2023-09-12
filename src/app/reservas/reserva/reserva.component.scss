@@ -1,0 +1,32 @@
+.reserva-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.back-button {
+  position: absolute;
+  top: 0.4rem;
+  left: 1rem;
+  color: white;
+  z-index: 9999;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2rem;
+  .info-text {
+    font-size: 0.6rem;
+  }
+  .info-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}
+
+.reserva-descricao{
+  margin: 1.5rem;
+}

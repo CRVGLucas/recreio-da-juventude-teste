@@ -1,27 +1,39 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="reservas-header">
   <ion-toolbar>
 
-    <ion-title>
-      Reservas
-    </ion-title>
+    <div class="header-title">
+      <h1 className="header-title-page">
+        Reservas
+      </h1>
+      <img src="assets/images/logo.PNG" alt="logo da empresa"/>
+    </div>
 
-    <div>
+    <div class="header-buttons">
       <button class="button">Nova reserva</button>
-      <button class="button">Minhas reservas</button>
+      <button class="button-selected">Minhas reservas</button>
     </div>
 
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <b>Suas reservas confirmadas ({{ reservas.length }})</b>
+<ion-content [fullscreen]="true" className="reservas-wrapper">
+
+  <p class="contador-de-reservas">Suas reservas confirmadas <span class="text-green">({{ reservas.length }})</span></p>
 
   <div class="card-reserva" [routerLink]="['/reserva/', reserva.id]" *ngFor="let reserva of reservas">
     <img class="card-image" [src]="reserva.imagem"/>
-    <h1 class="card-title">{{ reserva.nome }}</h1>
     <div class="card-reserva-info">
-      <p> <ion-icon name="people-outline"></ion-icon> {{ reserva.capacidade }} pessoas</p>
-      <p><ion-icon name="calendar-clear-outline"></ion-icon>{{ reserva.dataReservada }}</p>
+      <h1 class="card-title">{{ reserva.nome }}</h1>
+      <div>
+        <span class="card-reserva-item-info">
+          <ion-icon name="people-outline" class="icon-green"></ion-icon>
+          {{ reserva.capacidade }} pessoas
+        </span>
+        <span class="card-reserva-item-info">
+          <ion-icon name="calendar-clear-outline" class="icon-green"></ion-icon>
+          {{ reserva.dataReservada }}
+        </span>
+      </div>
     </div>
   </div>
 
