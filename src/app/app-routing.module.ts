@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ReservasComponent
   },
   {
-    path:  'reserva/:id',
+    path: 'reserva/:id',
     component: ReservaComponent
   }
 
