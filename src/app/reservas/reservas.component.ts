@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ReservasService } from './reservas.service';
-import { Reserva } from '../interface/Reserva';
 
 @Component({
   selector: 'app-reservas',
@@ -8,7 +7,7 @@ import { Reserva } from '../interface/Reserva';
   styleUrls: ['./reservas.component.scss'],
 })
 export class ReservasComponent  implements OnInit {
-  protected reservas: Reserva[] = []
+  protected reservas: any = []
   constructor(private reservasService: ReservasService) { }
 
   ngOnInit() {

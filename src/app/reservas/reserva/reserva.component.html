@@ -1,35 +1,40 @@
 
+
 <div class="back-button">
-  <ion-back-button text="Instruções de uso" icon="chevron-back"></ion-back-button>
+  <ion-toolbar >
+    <ion-back-button slot="start" defaultHref="" text="Instruções de uso" icon="chevron-back"></ion-back-button>
+  </ion-toolbar>
 </div>
-<div class="reserva-content">
-  <img [src]="reserva[0].imagem" alt="imagem do lugar reservável">
+
+<ion-content class="reserva-content">
+  <img [src]="reserva.imagem" alt="imagem do lugar reservável">
+
   <div class="reserva-infos">
     <div class="item-info">
-      <ion-icon name="people-outline" class="icon-green"></ion-icon>
-      <p class="info-value">{{ reserva[0].capacidade }}</p>
-      <p lass="info-text">limite usuários</p>
+      <ion-icon name="people-outline" size="16" class="icon-green"></ion-icon>
+      <p class="info-value">{{ reserva.capacidade }}</p>
+      <small class="info-text">limite usuários</small>
     </div>
 
     <div class="item-info">
-      <ion-icon name="map-outline" class="icon-green"></ion-icon>
-      <p class="info-value">{{ reserva[0].sede }}</p>
-      <p lass="info-text">sede</p>
+      <ion-icon name="map-outline" size="16" class="icon-green"></ion-icon>
+      <p class="info-value">{{ reserva.sede }}</p>
+      <small class="info-text">sede</small>
     </div>
 
     <div class="item-info">
-      <ion-icon name="cash-outline" class="icon-green"></ion-icon>
-      <p class="info-value">R$ {{ reserva[0].preco }}</p>
-      <p class="info-text">valor da locação</p>
+      <ion-icon name="cash-outline" size="16" class="icon-green"></ion-icon>
+      <p class="info-value">R$ {{ reserva.preco }}</p>
+      <small class="info-text">valor da locação</small>
     </div>
   </div>
 
   <div class="reserva-descricao">
     <p>
-      {{ reserva[0].descricao }}
+      {{ reserva.descricao }}
     </p>
   </div>
-</div>
+</ion-content>
 
 
 

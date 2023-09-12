@@ -1,7 +1,16 @@
-<div [routerLink]="['/reserva/', reserva.id]">
-  <h1>{{ reserva.nome }}</h1>
-  <div>
-    <p>{{ reserva.capacidade }} pessoas</p>
-    <p>{{ reserva.dataReservada }}</p>
+<div class="card-reserva" [routerLink]="['/reserva/', reserva.id]" >
+  <img class="card-image" [src]="reserva.imagem"/>
+  <div class="card-reserva-info">
+    <h1 class="card-title">{{ reserva.nome }}</h1>
+    <div>
+      <span class="card-reserva-item-info">
+        <ion-icon name="people-outline" class="icon-green"></ion-icon>
+        {{ reserva.capacidade }} pessoas
+      </span>
+      <span class="card-reserva-item-info">
+        <ion-icon name="calendar-clear-outline" class="icon-green"></ion-icon>
+        {{ reserva.dataReservada }}
+      </span>
+    </div>
   </div>
 </div>

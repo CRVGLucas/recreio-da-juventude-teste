@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Reserva } from '../interface/Reserva';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +32,8 @@ export class ReservasService {
 
   getReservaById(id: any){
     let reservas = this.getReservas();
-    return reservas.filter((reserva: any) => reserva.id == id)
+    let reserva = reservas.filter((reserva: any) => reserva.id == id)
+    return reserva[0];
   }
 
   constructor() { }

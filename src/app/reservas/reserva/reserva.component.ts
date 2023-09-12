@@ -8,15 +8,14 @@ import { ReservasService } from './../reservas.service';
   styleUrls: ['./reserva.component.scss'],
 })
 export class ReservaComponent  implements OnInit {
-  protected reserva: any = ''
+  protected reserva: any = null
+  private id = null
   constructor(route: ActivatedRoute, private reservasService: ReservasService) {
-    const id = route.snapshot.params['id'];
-    console.log("id: ", id)
-    this.reserva = this.reservasService.getReservaById(id);
+    this.id = route.snapshot.params['id'];
   }
 
   ngOnInit() {
-    console.log("reserva: ", this.reserva[0])
+    this.reserva = this.reservasService.getReservaById(this.id);
   }
 
 }
